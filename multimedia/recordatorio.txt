@@ -1,0 +1,1 @@
+- Benja: Recordatorio para el trabajo, esta carpeta es unicamente para imagenes, videos, etc. Contenido multimedia que se utilice en el proyecto.
