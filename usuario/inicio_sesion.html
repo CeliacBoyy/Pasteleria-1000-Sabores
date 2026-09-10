@@ -1,34 +1,60 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍰Inicio de Sesión</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Pastelería 1000 Sabores</title>
 </head>
 
-<body>
-    <h1>🍰Pastelería 1000 Sabores</h1>
-    <nav>
-        <a href="../inicio/index.html">Inicio</a>
-        <a href="../catalogo/catalogo.html">Catálogo</a>
-        <a href="registro.html">Registro</a>
+<body class="pagina-login">
+  <!-- Encabezado -->
+  <header class="header">
+    <h1 class="titulo-logo">Pastelería 1000 Sabores</h1>
+    <!-- Navegacion -->
+    <nav class="menu">
+      <a class="menu-enlace" href="../inicio/index.html">Inicio </a>
+      <a class="menu-enlace" href="../catalogo/catalogo.html">Catálogo</a>
+      <a class="menu-enlace" href="inicio_sesion.html">Inicio de Sesión</a>
+      <a class="menu-enlace" href="registro.html">Registro</a>
     </nav>
-    <h2>🔑Inicio de Sesión</h2>
-    <form>
-        <label for="correo">Correo electrónico:</label>
-        <br>
-        <input type="email" id="correo" name="correo" required>
-        <br><br>
-        <label for="contrasena">Contraseña:</label>
-        <br>
-        <input type="password" id="contrasena" name="contrasena">
-        <br><br>
-        <button type="submit">Iniciar Sesión</button>
-    </form>
-    <p>
+
+  </header>
+  <!--Principal -->
+  <main class="contenido-principal">
+    <section class="seccion-login">
+      <h2 class="titulo-seccion">Inicio de Sesión </h2>
+      <p class="descripcion">Ingresa a tu cuenta.</p>
+
+      <!-- Formulario -->
+      <form class="formulario-login">
+        <div class="campo-formulario">
+          <label class="etiqueta" for="correo">Correo electrónico:</label>
+          <br>
+          <input class="campo" type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label class="etiqueta" for="contrasena">Contraseña:</label>
+          <br>
+          <input class="campo" type="password" id="contrasena" name="contrasena" required>
+        </div>
+        <button class="boton" type="submit">Iniciar Sesión</button>
+
+      </form>
+      <p class="texto-registro">
         ¿No tienes una cuenta?
-        <a href="registro.html">Regístrate aquí</a>
-    </p>
+        <a class="enlace-registro" href="registro.html">Regístrate aquí</a>
+      </p>
+
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p class="texto-footer">Pastelería 1000 Sabores</p>
+  </footer>
 </body>
 </html>
