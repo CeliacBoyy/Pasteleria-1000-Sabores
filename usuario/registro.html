@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Pastelería 1000 Sabores</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- fuente principal -->
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
+  <!-- fuente encabezado -->
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
 </head>
-<body>
+
+
+
+<body class="pagina-registro">
+  <!-- Encabezado -->
+  <header class="header">
+    <h1 class="titulo-logo">Pastelería 1000 Saborez</h1>
     
+    <!-- Menú de navegación -->
+    <nav class="menu">
+      <a class="menu-enlace"href="../inicio/index.html"> Inicio </a>
+      <a class="menu-enlace" href="../catalogo/catalogo.html">Catálogo </a>
+      <a class="menu-enlace" href="inicio_sesion.html">Inicio de Sesión</a>
+      <a class="menu-enlace" href="registro.html">Registro</a>
+    </nav>
+
+  </header>
+
+  <!-- Contenido principal -->
+
+  <main class="contenido-principal">
+    <section class="seccion-registro">
+      <h2 class="titulo-seccion">Registro de Usuario</h2>
+      <p class="descripcion">Crea una cuenta en Pastelería 1000 Sabores.</p>
+
+      <!-- Formulario -->
+      <form class="formulario-registro">
+        <div class="campo-formulario">
+          <label class="etiqueta" for="nombre">Nombre:</label>
+          <br>
+          <input class="campo" type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label class="etiqueta" for="apellido"> Apellido:</label>
+          <br>
+          <input class="campo" type="text" id="apellido" name="apellido" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label class="etiqueta" for="correo">Correo electrónico:</label>
+          <br>
+          <input class="campo" type="email" id="correo" name="correo"required >
+        </div>
+
+        <div class="campo-formulario">
+          <label class="etiqueta" for="contrasena"> Contraseña:</label>
+          <br>
+          <input class="campo" type="password" id="contrasena" name="contrasena" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label class="etiqueta" for="confirmar-contrasena">Confirmar contraseña:</label>
+          <br>
+          <input class="campo" type="password" id="confirmar-contrasena" name="confirmar-contrasena" required >
+        </div>
+
+        <button class="boton" type="submit">Registrarse</button>
+      </form>
+
+      <p class="texto-login">¿Ya tienes una cuenta?
+        <a class="enlace-login" href="inicio_sesion.html">Inicia sesión aquí</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p class="texto-footer">
+      Pastelería 1000 Sabores
+    </p>
+
+  </footer>
+
 </body>
+
 </html>
