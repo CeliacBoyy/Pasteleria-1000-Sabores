@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de Compras - Pasteleria mil sabores</title>
 </head>
+
 <body>
-    
+
+    <header class="nav-header">
+        <nav>
+            <div>
+                <h1>Pasteleria mil sabores</h1>
+                <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
+                <ul class="navbar-nav">
+                    <li class="item-nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="../catalogo/catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="../carrito/carrito.html">Carrito</a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="../usuario/inicio_sesion.html">Usuario</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada-carrito">
+            <h2 class="portada-titulo">Tu Carrito de Compras</h2>
+
+            <div class="seccion-carrito">
+                <div class="tabla-contenedor">
+                    <table class="tabla-productos">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio Unitario</th>
+                                <th>Cantidad</th>
+                                <th>Acción Modificar</th>
+                                <th>Acción Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Torta Cuadrada de Chocolate</td>
+                                <td>$45.000 CLP</td>
+                                <td>1</td>
+                                <td>
+                                    <button type="button" class="btn-agregar">+</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-eliminar">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button type="button" class="btn-vaciar">Vaciar Carrito</button>
+                </div>
+
+                <div class="resumen-pago">
+                    <h3>Resumen de Compra</h3>
+
+                    <div class="caja-promociones">
+                        <label for="codigo-promocion">Promociones y Descuentos:</label>
+                        <input type="text" id="codigo-promocion" placeholder="Ingresa código (ej: FELICES50)">
+                        <button type="button" class="btn-aplicar-promo">Aplicar Promoción</button>
+                    </div>
+
+                    <div class="caja-tipo-pago">
+                        <label for="select-tipo-pago">Medio de Pago:</label>
+                        <select id="select-tipo-pago">
+                            <option value="debito">Tarjeta de Débito</option>
+                            <option value="credito">Tarjeta de Crédito</option>
+                            <option value="transferencia">Transferencia Bancaria</option>
+                        </select>
+                        <button type="button" class="btn-tipo-pago">Confirmar Tipo Pago</button>
+                    </div>
+
+                    <div class="caja-precio-total">
+                        <p><strong>Precio Total:</strong> <span id="monto-precio-total">$45.000 CLP</span></p>
+                    </div>
+
+                    <button type="button" class="btn-pagar">Pagar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="nav-footer">
+        <nav>
+            <div class="footer-contenedor">
+                <p class="footer-texto">Pasteleria mil sabores &copy; 2026 - Todos los derechos reservados</p>
+                <a class="footer-link" href="../contactanos/contactanos.html">Contactanos</a>
+            </div>
+        </nav>
+    </footer>
+
 </body>
+
 </html>

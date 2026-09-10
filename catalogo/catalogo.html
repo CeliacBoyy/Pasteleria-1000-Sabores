@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo - Pasteleria mil sabores</title>
 </head>
+
 <body>
-    
+
+    <header class="nav-header">
+        <nav>
+            <div>
+                <h1>Pasteleria mil sabores</h1>
+                <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
+                <ul class="navbar-nav">
+                    <li class="item-nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="../catalogo/catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="../carrito/carrito.html">Carrito</a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="../usuario/inicio_sesion.html">Usuario</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada-catalogo">
+            <div class="cabecera-catalogo">
+                <h2 class="portada-titulo">Nuestro Catálogo</h2>
+                
+                <a href="../carrito/carrito.html" class="btn-ir-carrito">
+                    <button type="button"> Ir al Carrito de Compras</button>
+                </a>
+            </div>
+
+            <p class="portada-baja">Explora nuestros deliciosos productos y añádelos a tu pedido.</p>
+
+            <div class="grid-productos">
+                <div class="tarjeta-producto">
+                    <h3>Torta Cuadrada de Chocolate</h3>
+                    <p>Deliciosa torta con capas de ganache y avellanas.</p>
+                    <p class="precio">$45.000 CLP</p>
+                    <button type="button" class="btn-agregar-catalogo">Añadir al Carrito</button>
+                </div>
+
+                <div class="tarjeta-producto">
+                    <h3>Torta Circular de Vainilla</h3>
+                    <p>Bizcocho tradicional relleno con crema pastelera.</p>
+                    <p class="precio">$40.000 CLP</p>
+                    <button type="button" class="btn-agregar-catalogo">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="nav-footer">
+        <nav>
+            <div class="footer-contenedor">
+                <p class="footer-texto">Pasteleria mil sabores &copy; 2026 - Todos los derechos reservados</p>
+                <a class="footer-link" href="../contactanos/contactanos.html">Contactanos</a>
+            </div>
+        </nav>
+    </footer>
+
 </body>
 </html>
