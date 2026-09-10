@@ -1,5 +1,9 @@
 /* PALETA DE COLORES PARA EL TRABAJO
-recordar ponerla en el inicio chicos */
+recordar ponerla en el inicio chicos 
+
+RECUERDEN copiar y pegar los CSS del
+HEADER y FOOTER tal como están, están listos
+para colocarlos en cada html y funcionales*/
 
 :root {
     --fondo-barras: #D8829D;
@@ -10,7 +14,7 @@ recordar ponerla en el inicio chicos */
 }
 
 /* ====================
-    CSS DE LOS HEADERS
+    CSS DE LOS HEADERS ¡PARA TODOS!
    ==================== 
  */
 
@@ -93,7 +97,7 @@ p.portada-baja {
 }
 
 /*  ===================
-    CSS DE LOS FOOTERS
+    CSS DE LOS FOOTERS ¡PARA TODOS!
     =================== */
 
 footer.nav-footer{
