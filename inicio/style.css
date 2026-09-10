@@ -1,0 +1,130 @@
+:root {
+    --fondo-barras: #D8829D;
+    --fondo-base: #d8c2ad;
+    --texto-principal: #FFF5E1;
+    --texto-secundario: #c5bab07b;
+    --hover: #5D4037;
+}
+
+/* ====================
+    CSS DE LOS HEADERS
+   ==================== 
+ */
+
+header.nav-header{
+    background-color: var(--fondo-barras);
+    padding: 15px 30px;
+}
+
+.nav-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    object-fit: contain;
+    gap: 5px
+}
+
+.header-logo h1.titulo{
+    margin: 0;
+}
+
+.header-logo p.eslogan-header{
+    margin: 2px 0 0 0;
+}
+
+.logo-img{
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+h1.titulo-header{
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    color: var(--texto-principal);
+    font-size: 28px;
+}
+
+p.eslogan-header{
+    margin: 4px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    color: var(--texto-principal);
+}
+
+ul.navbar-nav{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.item-nav a{
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+li.item-nav a:hover{
+    color: var(--hover);
+}
+
+/*  ===================
+    CSS DE LA PORTADA
+    =================== */
+
+section.portada-index{
+    background-color: var(--fondo-base);
+}
+
+
+p.portada-baja {
+    font-family: 'Lato', sans-serif;
+}
+
+/*  ===================
+    CSS DE LOS FOOTERS
+    =================== */
+
+footer.nav-footer{
+    background-color: var(--fondo-barras);
+    padding: 15px 30px;
+}
+
+.footer-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-texto{
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+a.footer-link{
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a.footer-link:visited{
+    color: var(--texto-principal);
+}
+
+.footer-link:hover{
+    color: var(--hover);
+}
