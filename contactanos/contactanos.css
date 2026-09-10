@@ -1,6 +1,3 @@
-/* PALETA DE COLORES PARA EL TRABAJO
-recordar ponerla en el inicio chicos */
-
 :root {
     --fondo-barras: #D8829D;
     --fondo-base: #d8c2ad;
@@ -77,19 +74,6 @@ li.item-nav a{
 
 li.item-nav a:hover{
     color: var(--hover);
-}
-
-/*  ===================
-    CSS DE LA PORTADA
-    =================== */
-
-section.portada-index{
-    background-color: var(--fondo-base);
-}
-
-
-p.portada-baja {
-    font-family: 'Lato', sans-serif;
 }
 
 /*  ===================
