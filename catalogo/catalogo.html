@@ -6,31 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Pasteleria mil sabores</title>
 
-    <!-- Archivo de estilos principal del inicio -->
-    <link rel="stylesheet" href="../inicio/style.css">
     <link rel="stylesheet" href="catalogo.css">
 
-    <!-- Fuentes Google -->
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
+    <!-- Fuentes: Comic Neue para el sitio y Lato/Arial para las pestañas de navegación -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Lato:wght@700&display=swap">
 </head>
 
 <body>
 
-    <!-- Encabezado idéntico al index -->
     <header class="nav-header">
         <nav class="nav-contenedor">
 
             <div class="header-logo">
-                <img class="logo-img" src="../multimedia/logo pasteleria.png" alt="logo pasteleria">
+                <img class="logo-img" src="..\multimedia\logo pasteleria.png" alt="logo pasteleria">
 
                 <div>
                     <h1 class="titulo-header">Pasteleria mil sabores</h1>
                     <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
                 </div>
+
             </div>
 
-            <!-- Navegación con opción para volver al Inicio -->
             <ul class="navbar-nav">
                 <li class="item-nav">
                     <a href="../inicio/index.html">Inicio</a>
@@ -50,65 +46,30 @@
     </header>
 
     <main>
-        <section class="portada-index">
-            <div class="portada-texto">
+        <section class="contenedor-principal">
+            <h2 class="portada-titulo">Nuestro Catálogo</h2>
+            <p class="portada-baja">Explora nuestras variedades, personaliza tus productos y añádelos al carrito.</p>
 
-                <h2 class="portada-titulo">Nuestro Catálogo</h2>
-                <p class="portada-baja">Explora nuestras variedades, personaliza tus productos y añádelos al carrito.</p>
-
-                <!-- Buscador y Filtros -->
-                <div class="panel-busqueda">
-                    <input type="text" id="inputBuscar" class="campo-buscar" placeholder="Buscar productos...">
-                    
-                    <div class="contenedor-filtros">
-                        <button type="button" class="btn-filtro active">Todas</button>
-                        <button type="button" class="btn-filtro">Tortas Cuadradas</button>
-                        <button type="button" class="btn-filtro">Tortas Circulares</button>
-                        <button type="button" class="btn-filtro">Postres Individuales</button>
-                        <button type="button" class="btn-filtro">Sin Azúcar</button>
-                        <button type="button" class="btn-filtro">Pastelería Tradicional</button>
-                        <button type="button" class="btn-filtro">Sin Gluten</button>
-                        <button type="button" class="btn-filtro">Vegana</button>
-                        <button type="button" class="btn-filtro">Especiales</button>
-                    </div>
+            <div class="panel-busqueda">
+                <input type="text" id="inputBuscar" class="campo-buscar" placeholder="Buscar por nombre o descripción...">
+                
+                <div class="contenedor-filtros">
+                    <button type="button" class="btn-filtro active" onclick="filtrarCategoria('Todas', event)">Todas</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Cuadradas', event)">Cuadradas</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Circulares', event)">Circulares</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Postres', event)">Postres</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Sin Azúcar', event)">Sin Azúcar</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Tradicional', event)">Tradicional</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Sin Gluten', event)">Sin Gluten</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Vegana', event)">Vegana</button>
+                    <button type="button" class="btn-filtro" onclick="filtrarCategoria('Especiales', event)">Especiales</button>
                 </div>
-
-                <!-- Grilla de Productos -->
-                <div class="grid-productos" id="contenedorProductos">
-
-                    <article class="tarjeta-producto">
-                        <h3 class="portada-titulo">Torta Cuadrada de Chocolate</h3>
-                        <p class="portada-baja">Deliciosa torta de chocolate con capas de ganache y un toque de avellanas.</p>
-                        <p class="portada-baja"><strong>Precio: $45.000 CLP</strong></p>
-                        
-                        <div class="campo-personalizacion">
-                            <label class="portada-baja" for="msj-TC001">Mensaje personalizado:</label>
-                            <input type="text" id="msj-TC001" placeholder="Ej: ¡Feliz Aniversario!">
-                        </div>
-
-                        <button type="button" class="btn-anadir">Añadir al Carrito</button>
-                    </article>
-
-                    <article class="tarjeta-producto">
-                        <h3 class="portada-titulo">Torta Circular de Vainilla</h3>
-                        <p class="portada-baja">Bizcocho de vainilla clásico relleno con crema pastelera y glaseado dulce.</p>
-                        <p class="portada-baja"><strong>Precio: $40.000 CLP</strong></p>
-                        
-                        <div class="campo-personalizacion">
-                            <label class="portada-baja" for="msj-TT001">Mensaje personalizado:</label>
-                            <input type="text" id="msj-TT001" placeholder="Ej: ¡Felicidades!">
-                        </div>
-
-                        <button type="button" class="btn-anadir">Añadir al Carrito</button>
-                    </article>
-
-                </div>
-
             </div>
+
+            <div class="grid-productos" id="contenedorProductos"></div>
         </section>
     </main>
 
-    <!-- Pie de página alineado con el estilo de inicio -->
     <footer class="nav-footer">
         <nav>
             <div class="footer-contenedor">
@@ -118,6 +79,7 @@
         </nav>
     </footer>
 
+    <script src="data.js"></script>
     <script src="catalogo.js"></script>
 </body>
 

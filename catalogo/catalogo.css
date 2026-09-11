@@ -1,0 +1,288 @@
+:root {
+    --fondo-barras: #D8829D;
+    --fondo-base: #d8c2ad;
+    --texto-principal: #FFF5E1;
+    --texto-secundario: #5D4037;
+    --hover: #5D4037;
+    --blanco: #ffffff;
+
+    /* Título principal del sitio, encabezado del header y botones de filtro */
+    --fuente-destacada: 'Comic Sans MS', 'Comic Neue', 'Fredoka', cursive, sans-serif;
+    
+    /* Fuente normal aplicada a títulos de tarjeta, descripciones, precios e inputs */
+    --fuente-normal: 'Arial', 'Helvetica', 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-normal);
+    background-color: var(--fondo-base);
+    color: var(--texto-secundario);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header.nav-header {
+    background-color: var(--fondo-barras);
+    padding: 15px 30px;
+}
+
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+h1.titulo-header {
+    margin: 0;
+    font-family: var(--fuente-destacada);
+    font-weight: bold;
+    color: var(--texto-principal);
+    font-size: 30px;
+}
+
+p.eslogan-header {
+    margin: 4px 0 0 0;
+    font-family: var(--fuente-normal);
+    color: var(--texto-principal);
+    font-size: 14px;
+}
+
+ul.navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.item-nav a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: var(--fuente-normal);
+    font-weight: 700;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+li.item-nav a:hover {
+    color: var(--hover);
+}
+
+/* Sección principal */
+main {
+    flex: 1;
+    background-color: var(--fondo-base);
+    padding: 30px 20px;
+}
+
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.portada-titulo {
+    font-family: var(--fuente-destacada);
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--texto-secundario);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.portada-baja {
+    font-family: var(--fuente-normal);
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Filtros y Buscador */
+.panel-busqueda {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.campo-buscar {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--fondo-barras);
+    border-radius: 8px;
+    font-family: var(--fuente-normal);
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.campo-buscar:focus {
+    border-color: var(--hover);
+}
+
+.contenedor-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-filtro {
+    background-color: var(--blanco);
+    color: var(--texto-secundario);
+    border: 1px solid var(--fondo-barras);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: var(--fuente-destacada);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-filtro:hover,
+.btn-filtro.active {
+    background-color: var(--fondo-barras);
+    color: var(--texto-principal);
+}
+
+/* Grilla de Productos y Tarjetas */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-producto {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.badge-categoria {
+    align-self: flex-start;
+    background-color: var(--fondo-base);
+    color: var(--hover);
+    font-family: var(--fuente-destacada);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Título de producto con letra normal */
+.tarjeta-titulo {
+    font-family: var(--fuente-normal);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: var(--texto-secundario);
+}
+
+/* Descripción de producto con letra normal */
+.tarjeta-descripcion {
+    font-family: var(--fuente-normal);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+}
+
+/* Precio de producto con letra normal */
+.tarjeta-precio {
+    font-family: var(--fuente-normal);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--texto-secundario);
+    margin: 0 0 15px 0;
+}
+
+.campo-personalizacion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.campo-personalizacion label {
+    font-family: var(--fuente-normal);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.campo-personalizacion input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--fuente-normal);
+    font-size: 13px;
+}
+
+.btn-anadir {
+    background-color: var(--fondo-barras);
+    color: var(--texto-principal);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: var(--fuente-normal);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-anadir:hover {
+    background-color: var(--hover);
+}
+
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--fuente-normal);
+    font-weight: bold;
+    padding: 40px;
+}
+
+/* Footer */
+footer.nav-footer {
+    background-color: var(--fondo-barras);
+    padding: 15px 30px;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-texto, a.footer-link {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: var(--fuente-normal);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+a.footer-link:hover {
+    color: var(--hover);
+    transition: color 0.3s ease;
+}
