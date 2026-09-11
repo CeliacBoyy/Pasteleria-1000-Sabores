@@ -1,38 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head> <!-- COPIAR Y PEGAR ESTO COMO BASE EN TODOS LOS HTML -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasteleria mil sabores</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fuente principal -->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
+    <!-- fuente encabezado -->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
+
 </head>
 
 <body>
 
     <!-- header base para todos los html (vistas) -->
-    <header class="nav-header">
-        <nav>
+    <!-- chicos RECUERDEN COPIAR Y PEGAR el HEADER del CONTACTANOS
+        aqui no esta el boton inicio, ese se encuentra en el contactanos -->
+        
+<header class="nav-header">
+    <nav class="nav-contenedor">
+
+        <div class="header-logo">
+            <img class="logo-img" src="..\multimedia\logo pasteleria.png" alt="logo pasteleria">
+
             <div>
-                <h1>Pasteleria mil sabores</h1>
+                <h1 class="titulo-header">Pasteleria mil sabores</h1>
                 <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
-                <ul class="navbar-nav">
-                    <li class="item-nav">
-                        <a href="../catalogo/catalogo.html">Catalogo</a>
-                    </li>
-                    <li class="item-nav">
-                        <a href="../carrito/carrito.html">Carrito</a>
-                    </li>
-                    <li class="item-nav">
-                        <a href="../usuario/inicio_sesion.html">Usuario</a>
-                    </li>
-                </ul>
             </div>
-        </nav>
-    </header>
+
+        </div>
+
+        <ul class="navbar-nav">
+            <li class="item-nav">
+                <a href="../catalogo/catalogo.html">Catalogo</a>
+            </li>
+            <li class="item-nav">
+                <a href="../carrito/carrito.html">Carrito</a>
+            </li>
+            <li class="item-nav">
+                <a href="../usuario/inicio_sesion.html">Usuario</a>
+            </li>
+        </ul>
+
+    </nav>
+</header>
 
     <main>
-        <!-- por desarollar Benja -->
-    </main>
+
+        <section class="portada-index">
+            <div class="portada-contenido">
+                <div class="portada-texto">
+        
+                    <h2 class="portada-titulo">¿Quienes somos?</h2>
+        
+                    <p class="portada-baja">Pastelería 1000 Sabores es una pastelería chilena con una historia de 50 años,
+                        dedicada a crear productos de repostería de alta calidad para acompañar los momentos más
+                        especiales de nuestros clientes.</p>
+        
+                    <p class="portada-baja">A lo largo de nuestra trayecctoria, nos hemos convertido en un referente de la
+                        repostería chilena.
+                        Uno de neustros grandes hitos ocurrió en 1995, cuando participamos en la creación de la
+                        torta más grande del mundo, formando parte de un récord Guinness que quedó marcado en
+                        nuestra historia.
+                    </p>
+        
+                    <p class="portada-baja">Hoy, seguimos celebrando nuestras raíces, pero mirando hacia el futuro. Por eso,
+                        buscamos entregar una experiencia de compra moderna, accesible y sencilla, acercando
+                        nuestros productros a más personas a través de nuestra tienda online.
+                    </p>
+        
+                    <h2 class="portada-titulo">Nuestra misión</h2>
+        
+                    <p class="portada-baja"> Ofrecer una experiencia dulce y memorable, entregando
+                        tortas y productos de repostería de alta calidad para todas las ocasiones, mientras mantenemos
+                        vivas nuestras raíces históricas y comentamos la creatividad en el mundo de la repostería.
+                    </p>
+        
+                    <h2 class="portada-titulo">Nuestra visión</h2>
+        
+                    <p class="portada-baja">Convertirnos en la tienda online líder de productos de
+                        reposteriía en Chile, destacándonos por nuestra innovación, calidad y por generar un
+                        impacto positivo en la comunidad.
+                    </p>
+        
+                    <h2 class="portada-titulo">50 años creando momentos dulces</h2>
+        
+                    <p class="portada-baja">Nuestra histoira nos inspira, nuestra calidad nos representa
+                        y la innovación nos impulsa a seguir creciendo.
+                    </p>
+        
+                </div>
+        
+                <div class="portada-video">
+                    <video src="..\multimedia\video pasteleria.mp4" loop autoplay muted></video>
+                </div>
+            </div>
+        </section>
+        
+        </main>
 
     <!-- footer base para todos los html (vistas) -->
     <footer class="nav-footer">
@@ -45,4 +114,5 @@
     </footer>
 
 </body>
+
 </html>
