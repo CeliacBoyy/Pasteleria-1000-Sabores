@@ -1,0 +1,193 @@
+:root {
+    --fondo-barras: #D8829D;
+    --fondo-base: #d8c2ad;
+    --texto-principal: #FFF5E1;
+    --texto-secundario: #c5bab07b;
+    --hover: #5D4037;
+}
+/*General*/
+*{
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--fondo-base);
+}
+
+.header {
+    background-color: var(--fondo-barras);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.titulo-logo {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    color: var(--texto-principal);
+    font-size: 28px;
+}
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-enlace {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-enlace:hover {
+    color: var(--hover);
+}
+
+
+.contenido-principal {
+    flex: 1;
+    background-color: var(--fondo-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.seccion-login {
+    background-color: var(--texto-principal);
+    border-radius: 16px;
+    padding: 35px 45px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 20px rgba(93, 64, 55, 0.25);
+    text-align: center;
+}
+.seccion-registro {
+    background-color: var(--texto-principal);
+    border-radius: 16px;
+    padding: 35px 45px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 20px rgba(93, 64, 55, 0.25);
+    text-align: center;
+}
+.titulo-seccion {
+    font-family: 'Pacifico', cursive;
+    color: var(--hover);
+    font-size: 30px;
+    margin: 0 0 8px 0;
+}
+.descripcion {
+    color: var(--hover);
+    margin: 0 0 25px 0;
+    font-family: 'Lato', sans-serif;
+}
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+.etiqueta {
+    color: var(--hover);
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-family: 'Lato', sans-serif;
+}
+.campo {
+    padding: 10px 12px;
+    border: 1px solid var(--texto-secundario);
+    border-radius: 8px;
+    background-color: #fffaf3;
+    color: var(--hover);
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.campo:focus {
+    outline: none;
+    border-color: var(--fondo-barras);
+    box-shadow: 0 0 0 3px rgba(216, 130, 157, 0.25);
+}
+
+.boton {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--fondo-barras);
+    color: var(--texto-principal);
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.boton:hover {
+    background-color: var(--hover);
+}
+.texto-registro {
+    margin-top: 22px;
+    color: var(--hover);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+/* Login y Registro*/
+.texto-login {
+    margin-top: 22px;
+    color: var(--hover);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+.enlace-registro {
+    color: var(--fondo-barras);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.enlace-login {
+    color: var(--fondo-barras);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.enlace-registro:hover {
+    color: var(--hover);
+    text-decoration: underline;
+}
+.enlace-login:hover {
+    color: var(--hover);
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: var(--fondo-barras);
+    padding: 15px 30px;
+    text-align: center;
+}
+.texto-footer {
+    margin: 0;
+    color: var(--texto-principal);
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
