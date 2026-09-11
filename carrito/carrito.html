@@ -6,112 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito - Pasteleria mil sabores</title>
 
-    <!-- Archivo de estilos principal del inicio -->
     <link rel="stylesheet" href="../inicio/style.css">
     <link rel="stylesheet" href="carrito.css">
-
-    <!-- Fuentes Google -->
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
 </head>
 
 <body>
 
-    <!-- Encabezado idéntico al index -->
     <header class="nav-header">
         <nav class="nav-contenedor">
-
             <div class="header-logo">
                 <img class="logo-img" src="../multimedia/logo pasteleria.png" alt="logo pasteleria">
-
                 <div>
                     <h1 class="titulo-header">Pasteleria mil sabores</h1>
                     <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
                 </div>
             </div>
 
-            <!-- Navegación con opción para volver al Inicio -->
             <ul class="navbar-nav">
-                <li class="item-nav">
-                    <a href="../inicio/index.html">Inicio</a>
-                </li>
-                <li class="item-nav">
-                    <a href="../catalogo/catalogo.html">Catalogo</a>
-                </li>
-                <li class="item-nav">
-                    <a href="../carrito/carrito.html">Carrito</a>
-                </li>
-                <li class="item-nav">
-                    <a href="../usuario/inicio_sesion.html">Usuario</a>
-                </li>
+                <li class="item-nav"><a href="../inicio/index.html">Inicio</a></li>
+                <li class="item-nav"><a href="../catalogo/catalogo.html">Catalogo</a></li>
+                <li class="item-nav"><a href="../carrito/carrito.html">Carrito</a></li>
+                <li class="item-nav"><a href="../usuario/inicio_sesion.html">Usuario</a></li>
             </ul>
-
         </nav>
     </header>
 
     <main>
-        <section class="portada-index">
-            <div class="portada-texto">
+        <section class="contenedor-principal">
+            <h2 class="portada-titulo">Tu Carrito de Compras</h2>
+            <p class="portada-baja">Revisa tus productos seleccionados, ingresa tu cupón y confirma la compra.</p>
 
-                <h2 class="portada-titulo">Tu Carrito de Compras</h2>
-                <p class="portada-baja">Revisa tus productos seleccionados, ingresa tu cupón y confirma la compra.</p>
-
-                <!-- Tabla de productos -->
-                <div class="contenedor-tabla">
-                    <table class="tabla-carrito">
-                        <thead>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Mensaje</th>
-                                <th>Precio</th>
-                                <th>Cantidad</th>
-                                <th>Subtotal</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody id="itemsCarrito">
-                            <tr>
-                                <td class="portada-baja">Torta Cuadrada de Chocolate</td>
-                                <td class="portada-baja">"¡Feliz Cumpleaños!"</td>
-                                <td class="portada-baja">$45.000 CLP</td>
-                                <td>
-                                    <input type="number" value="1" min="1" class="campo-cantidad">
-                                </td>
-                                <td class="portada-baja">$45.000 CLP</td>
-                                <td>
-                                    <button type="button" class="btn-eliminar">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Cupón de Descuento -->
-                <div class="bloque-cupon">
-                    <h2 class="portada-titulo">Código de Descuento</h2>
-                    <p class="portada-baja">Ingresa tu código promocional:</p>
-                    <input type="text" id="codigoCupon" placeholder="Ej: FELICES50">
-                    <button type="button" id="btnAplicarCupon">Aplicar</button>
-                </div>
-
-                <!-- Resumen de Totales -->
-                <div class="resumen-pedido">
-                    <h2 class="portada-titulo">Resumen del Pedido</h2>
-                    <p class="portada-baja">Subtotal: <span id="subtotal"><strong>$45.000 CLP</strong></span></p>
-                    <p class="portada-baja">Descuento: <span id="descuento"><strong>$0 CLP</strong></span></p>
-                    <p class="portada-baja">Total a pagar: <strong id="total">$45.000 CLP</strong></p>
-
-                    <div class="acciones-carrito">
-                        <button type="button" class="btn-vaciar">Vaciar Carrito</button>
-                        <button type="button" class="btn-confirmar">Confirmar Pedido</button>
+            <!-- Layout en 2 columnas -->
+            <div class="carrito-grid">
+                
+                <!-- Columna Izquierda: Tabla de productos -->
+                <div class="card-carrito">
+                    <div class="contenedor-tabla">
+                        <table class="tabla-carrito">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Mensaje</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Subtotal</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="itemsCarrito">
+                                <tr>
+                                    <td class="prod-nombre">Torta Cuadrada de Chocolate</td>
+                                    <td class="prod-mensaje">"¡Feliz Cumpleaños!"</td>
+                                    <td class="prod-precio">$45.000 CLP</td>
+                                    <td>
+                                        <input type="number" value="1" min="1" class="campo-cantidad">
+                                    </td>
+                                    <td class="prod-subtotal">$45.000 CLP</td>
+                                    <td>
+                                        <button type="button" class="btn-eliminar">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+
+                <!-- Columna Derecha: Cupón + Resumen -->
+                <div class="card-resumen">
+                    
+                    <div class="bloque-cupon">
+                        <h3 class="resumen-titulo">Código de Descuento</h3>
+                        <p class="texto-cupon">Ingresa tu código promocional:</p>
+                        <div class="cupon-box">
+                            <input type="text" id="codigoCupon" placeholder="Ej: FELICES50">
+                            <button type="button" id="btnAplicarCupon">Aplicar</button>
+                        </div>
+                    </div>
+
+                    <hr class="separador">
+
+                    <div class="resumen-pedido">
+                        <h3 class="resumen-titulo">Resumen del Pedido</h3>
+                        
+                        <div class="fila-resumen">
+                            <span>Subtotal:</span>
+                            <span id="subtotal"><strong>$45.000 CLP</strong></span>
+                        </div>
+                        
+                        <div class="fila-resumen">
+                            <span>Descuento:</span>
+                            <span id="descuento"><strong>$0 CLP</strong></span>
+                        </div>
+                        
+                        <div class="fila-resumen fila-total">
+                            <span>Total a pagar:</span>
+                            <strong id="total">$45.000 CLP</strong>
+                        </div>
+
+                        <div class="acciones-carrito">
+                            <button type="button" class="btn-confirmar">Confirmar Pedido</button>
+                            <button type="button" class="btn-vaciar">Vaciar Carrito</button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </section>
     </main>
 
-    <!-- Pie de página alineado con el estilo de inicio -->
     <footer class="nav-footer">
         <nav>
             <div class="footer-contenedor">
