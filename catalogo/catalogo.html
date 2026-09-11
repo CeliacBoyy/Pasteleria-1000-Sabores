@@ -5,63 +5,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Pasteleria mil sabores</title>
+
+    <!-- Archivo de estilos principal del inicio -->
+    <link rel="stylesheet" href="../inicio/style.css">
+    <link rel="stylesheet" href="catalogo.css">
+
+    <!-- Fuentes Google -->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
 </head>
 
 <body>
 
+    <!-- Encabezado idéntico al index -->
     <header class="nav-header">
-        <nav>
-            <div>
-                <h1>Pasteleria mil sabores</h1>
-                <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
-                <ul class="navbar-nav">
-                    <li class="item-nav">
-                        <a href="../inicio/index.html">Inicio</a>
-                    </li>
-                    <li class="item-nav">
-                        <a href="../catalogo/catalogo.html">Catalogo</a>
-                    </li>
-                    <li class="item-nav">
-                        <a href="../carrito/carrito.html">Carrito</a>
-                    </li>
-                    <li class="item-nav">
-                        <a href="../usuario/inicio_sesion.html">Usuario</a>
-                    </li>
-                </ul>
+        <nav class="nav-contenedor">
+
+            <div class="header-logo">
+                <img class="logo-img" src="../multimedia/logo pasteleria.png" alt="logo pasteleria">
+
+                <div>
+                    <h1 class="titulo-header">Pasteleria mil sabores</h1>
+                    <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
+                </div>
             </div>
+
+            <!-- Navegación con opción para volver al Inicio -->
+            <ul class="navbar-nav">
+                <li class="item-nav">
+                    <a href="../inicio/index.html">Inicio</a>
+                </li>
+                <li class="item-nav">
+                    <a href="../catalogo/catalogo.html">Catalogo</a>
+                </li>
+                <li class="item-nav">
+                    <a href="../carrito/carrito.html">Carrito</a>
+                </li>
+                <li class="item-nav">
+                    <a href="../usuario/inicio_sesion.html">Usuario</a>
+                </li>
+            </ul>
+
         </nav>
     </header>
 
     <main>
-        <section class="portada-catalogo">
-            <div class="cabecera-catalogo">
+        <section class="portada-index">
+            <div class="portada-texto">
+
                 <h2 class="portada-titulo">Nuestro Catálogo</h2>
-                
-                <a href="../carrito/carrito.html" class="btn-ir-carrito">
-                    <button type="button"> Ir al Carrito de Compras</button>
-                </a>
-            </div>
+                <p class="portada-baja">Explora nuestras variedades, personaliza tus productos y añádelos al carrito.</p>
 
-            <p class="portada-baja">Explora nuestros deliciosos productos y añádelos a tu pedido.</p>
-
-            <div class="grid-productos">
-                <div class="tarjeta-producto">
-                    <h3>Torta Cuadrada de Chocolate</h3>
-                    <p>Deliciosa torta con capas de ganache y avellanas.</p>
-                    <p class="precio">$45.000 CLP</p>
-                    <button type="button" class="btn-agregar-catalogo">Añadir al Carrito</button>
+                <!-- Buscador y Filtros -->
+                <div class="panel-busqueda">
+                    <input type="text" id="inputBuscar" class="campo-buscar" placeholder="Buscar productos...">
+                    
+                    <div class="contenedor-filtros">
+                        <button type="button" class="btn-filtro active">Todas</button>
+                        <button type="button" class="btn-filtro">Tortas Cuadradas</button>
+                        <button type="button" class="btn-filtro">Tortas Circulares</button>
+                        <button type="button" class="btn-filtro">Postres Individuales</button>
+                        <button type="button" class="btn-filtro">Sin Azúcar</button>
+                        <button type="button" class="btn-filtro">Pastelería Tradicional</button>
+                        <button type="button" class="btn-filtro">Sin Gluten</button>
+                        <button type="button" class="btn-filtro">Vegana</button>
+                        <button type="button" class="btn-filtro">Especiales</button>
+                    </div>
                 </div>
 
-                <div class="tarjeta-producto">
-                    <h3>Torta Circular de Vainilla</h3>
-                    <p>Bizcocho tradicional relleno con crema pastelera.</p>
-                    <p class="precio">$40.000 CLP</p>
-                    <button type="button" class="btn-agregar-catalogo">Añadir al Carrito</button>
+                <!-- Grilla de Productos -->
+                <div class="grid-productos" id="contenedorProductos">
+
+                    <article class="tarjeta-producto">
+                        <h3 class="portada-titulo">Torta Cuadrada de Chocolate</h3>
+                        <p class="portada-baja">Deliciosa torta de chocolate con capas de ganache y un toque de avellanas.</p>
+                        <p class="portada-baja"><strong>Precio: $45.000 CLP</strong></p>
+                        
+                        <div class="campo-personalizacion">
+                            <label class="portada-baja" for="msj-TC001">Mensaje personalizado:</label>
+                            <input type="text" id="msj-TC001" placeholder="Ej: ¡Feliz Aniversario!">
+                        </div>
+
+                        <button type="button" class="btn-anadir">Añadir al Carrito</button>
+                    </article>
+
+                    <article class="tarjeta-producto">
+                        <h3 class="portada-titulo">Torta Circular de Vainilla</h3>
+                        <p class="portada-baja">Bizcocho de vainilla clásico relleno con crema pastelera y glaseado dulce.</p>
+                        <p class="portada-baja"><strong>Precio: $40.000 CLP</strong></p>
+                        
+                        <div class="campo-personalizacion">
+                            <label class="portada-baja" for="msj-TT001">Mensaje personalizado:</label>
+                            <input type="text" id="msj-TT001" placeholder="Ej: ¡Felicidades!">
+                        </div>
+
+                        <button type="button" class="btn-anadir">Añadir al Carrito</button>
+                    </article>
+
                 </div>
+
             </div>
         </section>
     </main>
 
+    <!-- Pie de página alineado con el estilo de inicio -->
     <footer class="nav-footer">
         <nav>
             <div class="footer-contenedor">
@@ -71,5 +118,7 @@
         </nav>
     </footer>
 
+    <script src="catalogo.js"></script>
 </body>
+
 </html>
