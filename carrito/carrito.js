@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let porcentajeDescuento = 0;
 
+    const CARRITO_KEY = 'carritoMilSabores';
+
     // Lista de cupones válidos
     const cuponesValidos = {
         'FELICES50': 0.50, // 50% de descuento
@@ -23,6 +25,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function formatearCLP(numero) {
         return `$${numero.toLocaleString('es-CL')} CLP`;
+    }
+
+    function obtenerCarrito() {
+        try {
+            return JSON.parse(localStorage.getItem(CARRITO_KEY)) || [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function escaparHtml(texto) {
+        const div = document.createElement('div');
+        div.textContent = texto || '';
+        return div.innerHTML;
+    }
+
+    function crearFila(item) {
+        return `
+            <tr data-codigo="${item.codigo}" data-mensaje="${escaparHtml(item.mensaje)}">
+                <td class="prod-nombre">${escaparHtml(item.nombre)}</td>
+                <td class="prod-mensaje">${item.mensaje ? `"${escaparHtml(item.mensaje)}"` : '-'}</td>
+                <td class="prod-precio">${formatearCLP(item.precio)}</td>
+                <td>
+                    <input type="number" value="${item.cantidad}" min="1" class="campo-cantidad">
+                </td>
+                <td class="prod-subtotal">${formatearCLP(item.precio * item.cantidad)}</td>
+                <td>
+                    <button type="button" class="btn-eliminar">Eliminar</button>
+                </td>
+            </tr>
+        `;
+    }
+
+    function guardarCarritoDesdeDOM() {
+        const carrito = [];
+        tablaItems.querySelectorAll('tr').forEach(fila => {
+            if (fila.querySelector('.carrito-vacio')) return;
+            carrito.push({
+                codigo: fila.dataset.codigo || '',
+                nombre: fila.querySelector('.prod-nombre').textContent,
+                precio: extraerNumero(fila.querySelector('.prod-precio').textContent),
+                mensaje: fila.dataset.mensaje || '',
+                cantidad: parseInt(fila.querySelector('.campo-cantidad').value) || 1
+            });
+        });
+        localStorage.setItem(CARRITO_KEY, JSON.stringify(carrito));
+    }
+
+    function cargarCarrito() {
+        const carrito = obtenerCarrito();
+        if (carrito.length === 0) {
+            tablaItems.innerHTML = '';
+            verificarCarritoVacio();
+        } else {
+            tablaItems.innerHTML = carrito.map(crearFila).join('');
+        }
+        actualizarTotales();
     }
 
     function actualizarTotales() {
@@ -78,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.target.value = 1;
             }
             actualizarTotales();
+            guardarCarritoDesdeDOM();
         }
     });
 
@@ -88,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fila.remove();
                 verificarCarritoVacio();
                 actualizarTotales();
+                guardarCarritoDesdeDOM();
             }
         }
     });
@@ -124,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (inputCupon) inputCupon.value = '';
                 verificarCarritoVacio();
                 actualizarTotales();
+                localStorage.setItem(CARRITO_KEY, JSON.stringify([]));
             }
         });
     }
@@ -144,8 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (inputCupon) inputCupon.value = '';
             verificarCarritoVacio();
             actualizarTotales();
+            localStorage.setItem(CARRITO_KEY, JSON.stringify([]));
         });
     }
 
-    actualizarTotales();
+    cargarCarrito();
 });
