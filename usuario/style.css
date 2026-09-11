@@ -235,15 +235,38 @@ li.item-nav a:hover{
     text-decoration: underline;
 }
 
-.footer {
+footer.nav-footer{
     background-color: var(--fondo-barras);
     padding: 15px 30px;
-    text-align: center;
 }
-.texto-footer {
-    margin: 0;
+
+.footer-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-texto{
     color: var(--texto-principal);
+    text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 14px;
+}
+
+a.footer-link{
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a.footer-link:visited{
+    color: var(--texto-principal);
+}
+
+a.footer-link:hover{
+    color: var(--hover);
+    transition: color 0.3s ease;
 }

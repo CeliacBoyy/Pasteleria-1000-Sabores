@@ -254,9 +254,3 @@ a.footer-link:hover {
     color: var(--hover);
     transition: color 0.3s ease;
 }
-
-@media (max-width: 600px) {
-    .contenedor-principal {
-        padding: 20px;
-    }
-}
