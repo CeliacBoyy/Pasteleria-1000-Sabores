@@ -29,7 +29,6 @@
     <section class="seccion-registro">
       <h2 class="titulo-seccion">Registro de Usuario</h2>
       <p class="descripcion">Crea una cuenta en Pastelería 1000 Sabores.</p>
-
       <!-- Formulario -->
       <form class="formulario-registro">
         <div class="campo-formulario">
@@ -39,9 +38,15 @@
         </div>
 
         <div class="campo-formulario">
-          <label class="etiqueta" for="apellido"> Apellido:</label>
+          <label class="etiqueta" for="apellido">Apellido:</label>
           <br>
           <input class="campo" type="text" id="apellido" name="apellido" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label class="etiqueta" for="rut">Rut:</label>
+          <br>
+          <input class="campo" type="text" id="rut" name="rut" placeholder="12345678-9" required>
         </div>
 
         <div class="campo-formulario">
@@ -76,9 +81,7 @@
       Pastelería 1000 Sabores
     </p>
   </footer>
-
   <script src="auth.js"></script>
 
 </body>
-
 </html>
