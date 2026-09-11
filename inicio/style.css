@@ -87,13 +87,52 @@ li.item-nav a:hover{
     CSS DE LA PORTADA
     =================== */
 
-section.portada-index{
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
     background-color: var(--fondo-base);
 }
 
+.portada-contenido{
+    display: flex;
+    align-items: center;
+}
 
+.portada-texto{
+    width: 50%;
+    margin-left: 20px;
+}
+
+.portada-video{
+    width: 40%;
+    margin-left: 70px;
+}
+
+.portada-video video{
+    width: 100%;
+}
+
+h2.portada-titulo{
+    font-family: 'Pacifico', cursive;
+    color: var(--hover);
+}
+    
 p.portada-baja {
     font-family: 'Lato', sans-serif;
+    color: var(--hover);
+}
+
+section.portada-index{
+    background-color: var(--fondo-base);
 }
 
 /*  ===================
