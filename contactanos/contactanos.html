@@ -6,71 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasteleria mil sabores</title>
 
-    <link rel="stylesheet" href="contactanos.css    ">
+    <link rel="stylesheet" href="contactanos.css">
 
-    <!-- fuente principal -->
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato">
-    <!-- fuente encabezado -->
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Pacifico">
-
+    <!-- Fuentes desde Google Fonts -->
+    <link rel="stylesheet" href="https://googleapis.com">
 </head>
 
 <body>
 
     <!-- header base para todos los html (vistas) -->
-<header class="nav-header">
-    <nav class="nav-contenedor">
+    <header class="nav-header">
+        <nav class="nav-contenedor">
 
-        <div class="header-logo">
-            <img class="logo-img" src="..\multimedia\logo pasteleria.png" alt="logo pasteleria">
+            <div class="header-logo">
+                <img class="logo-img" src="../multimedia/logo pasteleria.png" alt="logo pasteleria">
 
-            <div>
-                <h1 class="titulo-header">Pasteleria mil sabores</h1>
-                <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
+                <div>
+                    <h1 class="titulo-header">Pasteleria mil sabores</h1>
+                    <p class="eslogan-header">¡Celebra la dulzura de la vida con Pastelería 1000 Sabores!</p>
+                </div>
+
             </div>
 
-        </div>
+            <ul class="navbar-nav">
+                <li class="item-nav"><a href="../inicio/index.html">Inicio</a></li>
+                <li class="item-nav"><a href="../catalogo/catalogo.html">Catalogo</a></li>
+                <li class="item-nav"><a href="../carrito/carrito.html">Carrito</a></li>
+                <li class="item-nav"><a href="../usuario/inicio_sesion.html">Usuario</a></li>
+            </ul>
 
-        <ul class="navbar-nav">
-            <li class="item-nav">
-                <a href="../inicio/index.html">Inicio</a>
-            </li>
-            <li class="item-nav">
-                <a href="../catalogo/catalogo.html">Catalogo</a>
-            </li>
-            <li class="item-nav">
-                <a href="../carrito/carrito.html">Carrito</a>
-            </li>
-            <li class="item-nav">
-                <a href="../usuario/inicio_sesion.html">Usuario</a>
-            </li>
-        </ul>
+        </nav>
+    </header>
 
-    </nav>
-</header>
-
-<body>
-    
     <main>
     
         <section class="portada-contactanos">
 
-            <div class="portada-img">
-                <img class="ubicacion-img" src="..\multimedia\imagen ubicacion.jpeg" alt="Ubicación de la Pastelería 1000 Sabores">
+            <!-- Cuadro de la Imagen -->
+            <div class="card-contacto-img">
+                <img class="ubicacion-img" src="../multimedia/imagen ubicacion.jpeg" alt="Ubicación de la Pastelería 1000 Sabores">
             </div>
 
-            <div class="portada-texto">
-                <h2 class="portada-titulo">Contactanos</h2>
+            <!-- Cuadro de la Información de Contacto -->
+            <div class="card-contacto-info">
+                <h2 class="portada-titulo">Contáctanos</h2>
 
-                <p class="texto-contactanos">📞+56 32 1234567</p>
-
-                <p class="texto-contactanos">📞+56 9 12345678</p>
-
-                <p class="texto-contactanos">📍Dirección falsa 123, La florida, Región Metropolitana</p>
-
-                <p class="texto-contactanos">🕓 Lunes a Sábado de 11:00 a 20:00 hrs. Domingo de
-                    11:00 a 18:30 hrs.
-                </p>
+                <p class="texto-contactanos">📞 +56 32 1234567</p>
+                <p class="texto-contactanos">📞 +56 9 12345678</p>
+                <p class="texto-contactanos">📍 Dirección falsa 123, La Florida, Región Metropolitana</p>
+                <p class="texto-contactanos">🕓 Lunes a Sábado de 11:00 a 20:00 hrs. <br>Domingo de 11:00 a 18:30 hrs.</p>
             </div>
 
         </section>

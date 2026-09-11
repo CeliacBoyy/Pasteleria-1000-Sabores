@@ -75,9 +75,153 @@ li.item-nav a:hover{
 
 /* cuerpo */
 
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 main{
+    flex: 1;
     background-color: var(--fondo-base);
 }
+
+.contenedor-principal{
+    padding: 20px 40px;
+}
+
+.portada-titulo{
+    font-family: 'Lato', sans-serif;
+    color: #4a3b32;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.carrito-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.card-carrito{
+    background-color: var(--texto-principal);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(93, 64, 55, 0.25);
+}
+
+.tabla-carrito{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 16px;
+}
+
+.tabla-carrito th{
+    border-bottom: 2px solid var(--fondo-barras);
+    padding: 12px 8px;
+    color: var(--hover);
+    text-align: left;    
+}
+
+.tabla-carrito td {
+    padding: 15px 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.campo-cantidad {
+    width: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.card-resumen {
+    background-color: var(--texto-principal);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resumen-titulo {
+    margin: 0 0 10px 0;
+    font-family: 'Comic Neue', sans-serif;
+    color: var(--hover);
+    font-size: 20px;
+}
+
+.texto-cupon {
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 8px 0;
+}
+
+.cupon-box {
+    display: flex;
+    gap: 8px;
+}
+
+.cupon-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.separador {
+    border: 0;
+    border-top: 1px solid var(--fondo-barras);
+    margin: 10px 0;
+    width: 100%;
+}
+
+.fila-resumen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 16px;
+}
+
+.fila-total {
+    border-top: 1px dashed var(--hover);
+    padding-top: 12px;
+    font-size: 18px;
+    color: var(--hover);
+}
+
+.acciones-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.acciones-carrito button, .cupon-box button, .btn-eliminar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-confirmar { background-color: var(--hover); color: white; }
+.btn-confirmar:hover { background-color: #422d27; }
+.btn-vaciar { background-color: #e0a3b5; color: var(--hover); }
+.btn-vaciar:hover { background-color: #d18ba2; }
+#btnAplicarCupon { background-color: var(--fondo-barras); color: white; }
+#btnAplicarCupon:hover { background-color: #c46b86; }
+.btn-eliminar { background-color: #ff6b6b; color: white; padding: 5px 10px; }
+.btn-eliminar:hover { background-color: #e65c5c; }
 
 /* footer */
 

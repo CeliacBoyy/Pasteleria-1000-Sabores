@@ -1,10 +1,3 @@
-/* PALETA DE COLORES PARA EL TRABAJO
-recordar ponerla en el inicio chicos 
-
-RECUERDEN copiar y pegar los CSS del
-HEADER y FOOTER tal como están, están listos
-para colocarlos en cada html y funcionales*/
-
 :root {
     --fondo-barras: #D8829D;
     --fondo-base: #d8c2ad;
@@ -13,57 +6,52 @@ para colocarlos en cada html y funcionales*/
     --hover: #5D4037;
 }
 
-/* ====================
-    CSS DE LOS HEADERS ¡PARA TODOS!
-   ==================== 
- */
-
-header.nav-header{
+header.nav-header {
     background-color: var(--fondo-barras);
     padding: 15px 30px;
 }
 
-.nav-contenedor{
+.nav-contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-logo{
+.header-logo {
     display: flex;
     align-items: center;
     object-fit: contain;
-    gap: 5px
+    gap: 5px;
 }
 
-.header-logo h1.titulo{
+.header-logo h1.titulo {
     margin: 0;
 }
 
-.header-logo p.eslogan-header{
+.header-logo p.eslogan-header {
     margin: 2px 0 0 0;
 }
 
-.logo-img{
+.logo-img {
     width: 60px;
     height: auto;
     object-fit: contain;
 }
 
-h1.titulo-header{
+h1.titulo-header {
     margin: 0;
     font-family: 'Pacifico', cursive;
     color: var(--texto-principal);
     font-size: 28px;
 }
 
-p.eslogan-header{
+p.eslogan-header {
     margin: 4px 0 0 0;
     font-family: 'Lato', sans-serif;
     color: var(--texto-principal);
 }
 
-ul.navbar-nav{
+ul.navbar-nav {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -71,7 +59,7 @@ ul.navbar-nav{
     padding: 0;
 }
 
-li.item-nav a{
+li.item-nav a {
     color: var(--texto-principal);
     text-decoration: none;
     font-family: 'Lato', sans-serif;
@@ -79,86 +67,117 @@ li.item-nav a{
     transition: color 0.3s ease;
 }
 
-li.item-nav a:hover{
+li.item-nav a:hover {
     color: var(--hover);
 }
 
-/*  ===================
-    CSS DE LA PORTADA
-    =================== */
-
-html, body{
+html, body {
     height: 100%;
     margin: 0;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 }
 
-main{
+main {
     flex: 1;
     background-color: var(--fondo-base);
-}
-
-.portada-contenido{
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-.portada-texto{
-    width: 50%;
-    margin-left: 20px;
-}
-
-.portada-video{
-    width: 40%;
-    margin-left: 70px;
-}
-
-.portada-video video{
+section.portada-index {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h2.portada-titulo{
+.portada-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.card-index-texto {
+    flex: 1.2;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.card-index-video {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-index-video video {
+    width: 100%;
+    height: 100%;
+    max-height: 510px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+h2.portada-titulo {
     font-family: 'Pacifico', cursive;
     color: var(--hover);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 26px;
 }
     
 p.portada-baja {
     font-family: 'Lato', sans-serif;
     color: var(--hover);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-section.portada-index{
-    background-color: var(--fondo-base);
+.card-index-texto::-webkit-scrollbar {
+    width: 6px;
 }
 
-/*  ===================
-    CSS DE LOS FOOTERS ¡PARA TODOS!
-    =================== */
+.card-index-texto::-webkit-scrollbar-thumb {
+    background-color: var(--fondo-barras);
+    border-radius: 10px;
+}
 
-footer.nav-footer{
+footer.nav-footer {
     background-color: var(--fondo-barras);
     padding: 15px 30px;
 }
 
-.footer-contenedor{
+.footer-contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-texto{
+.footer-texto {
     color: var(--texto-principal);
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     font-size: 14px;
+    margin: 0;
 }
 
-a.footer-link{
+a.footer-link {
     color: var(--texto-principal);
     text-decoration: none;
     font-family: 'Lato', sans-serif;
@@ -166,11 +185,11 @@ a.footer-link{
     font-weight: bold;
 }
 
-a.footer-link:visited{
+a.footer-link:visited {
     color: var(--texto-principal);
 }
 
-a.footer-link:hover{
+a.footer-link:hover {
     color: var(--hover);
     transition: color 0.3s ease;
 }
