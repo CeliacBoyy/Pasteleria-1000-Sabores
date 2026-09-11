@@ -8,8 +8,6 @@ Este proyecto corresponde a un trabajo desarrollado para el ramo *Fullstack II, 
 
 El proyecto busca renovar su sistema de ventas online para ofrecer a sus clientes una experiencia de compra *moderna, accesible y personalizada*.
 
-La plataforma permitirá a los usuarios comprar productos de repostería, personalizar pedidos y acceder a diferentes descuentos y promociones.
-
 ## 🎯 Objetivo
 
 Desarrollar una plataforma de comercio electrónico para *Pastelería 1000 Sabores*, permitiendo modernizar su sistema de ventas y entregar a sus clientes una experiencia de compra sencilla, accesible y personalizada.
